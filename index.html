@@ -26,414 +26,414 @@
     </div>
 
     <div class="container">
-        <!-- SA Document Page -->
-        <div class="page" id="sa-document">
-            <div class="sa-header">
-                <h1 class="sa-title">튜터 관리 시스템 SA</h1>
-                <p class="sa-subtitle">System Architecture & Technical Specifications</p>
-            </div>
+    <!-- SA Document Page -->
+    <div class="page" id="sa-document">
+        <div class="sa-header">
+            <h1 class="sa-title">튜터 관리 시스템 SA</h1>
+            <p class="sa-subtitle">System Architecture & Technical Specifications</p>
+        </div>
 
-            <div class="sa-nav">
-                <ul class="sa-nav-list">
-                    <li class="sa-nav-item"><a href="#sa-overview" class="sa-nav-link">프로젝트 개요</a></li>
-                    <li class="sa-nav-item"><a href="#sa-architecture" class="sa-nav-link">시스템 아키텍처</a></li>
-                    <li class="sa-nav-item"><a href="#sa-dataflow" class="sa-nav-link">데이터 플로우</a></li>
-                    <li class="sa-nav-item"><a href="#sa-api" class="sa-nav-link">API 명세</a></li>
-                    <li class="sa-nav-item"><a href="#sa-database" class="sa-nav-link">데이터베이스</a></li>
-                    <li class="sa-nav-item"><a href="#sa-security" class="sa-nav-link">보안 & 성능</a></li>
-                </ul>
-            </div>
+        <div class="sa-nav">
+            <ul class="sa-nav-list">
+                <li class="sa-nav-item"><a href="#sa-overview" class="sa-nav-link">프로젝트 개요</a></li>
+                <li class="sa-nav-item"><a href="#sa-architecture" class="sa-nav-link">시스템 아키텍처</a></li>
+                <li class="sa-nav-item"><a href="#sa-dataflow" class="sa-nav-link">데이터 플로우</a></li>
+                <li class="sa-nav-item"><a href="#sa-api" class="sa-nav-link">API 명세</a></li>
+                <li class="sa-nav-item"><a href="#sa-database" class="sa-nav-link">데이터베이스</a></li>
+                <li class="sa-nav-item"><a href="#sa-security" class="sa-nav-link">보안 & 성능</a></li>
+            </ul>
+        </div>
 
-            <div class="sa-main">
-                <section class="sa-section" id="sa-overview">
-                    <h2 class="sa-section-title">프로젝트 개요</h2>
-                    
-                    <div class="sa-project-overview">
-                        <div class="sa-problem-definition">
-                            <h3 class="sa-subsection-title">문제 정의</h3>
-                            <div class="sa-problem-grid">
-                                <div class="sa-problem-item">
-                                    <h4>비효율적인 수작업 프로세스</h4>
-                                    <p>온라인 교육 사업 확장에 따라 튜터 채용이 증가하고 있으나, 계약서 요청부터 온보딩까지의 전 과정이 수작업으로 이루어져 처리 시간이 과도하게 소요되고 있습니다.</p>
-                                </div>
-                                <div class="sa-problem-item">
-                                    <h4>분산된 튜터 정보 관리</h4>
-                                    <p>튜터의 경력 정보, 전문 분야, 기술 스택 등 중요한 정보가 여러 시스템에 분산되어 있어 효율적인 관리와 활용이 어려운 상황입니다.</p>
-                                </div>
-                                <div class="sa-problem-item">
-                                    <h4>계약 진행 상황 추적 한계</h4>
-                                    <p>외부 전자계약 SaaS 사용으로 인한 API 연동 제약과 수동 상태 관리로 인해 실시간 진행 상황 파악이 어려워 업무 효율성이 저하되고 있습니다.</p>
-                                </div>
-                                <div class="sa-problem-item">
-                                    <h4>확장성 부족</h4>
-                                    <p>현재 시스템으로는 향후 튜터 규모 확장 시 대응이 어려우며, 튜터 평가, 성과 관리 등 추가 기능 개발에 한계가 있습니다.</p>
-                                </div>
+        <div class="sa-main">
+            <section class="sa-section" id="sa-overview">
+                <h2 class="sa-section-title">프로젝트 개요</h2>
+                
+                <div class="sa-project-overview">
+                    <div class="sa-problem-definition">
+                        <h3 class="sa-subsection-title">문제 정의</h3>
+                        <div class="sa-problem-grid">
+                            <div class="sa-problem-item">
+                                <h4>비효율적인 수작업 프로세스</h4>
+                                <p>온라인 교육 사업 확장에 따라 튜터 채용이 증가하고 있으나, 계약서 요청부터 온보딩까지의 전 과정이 수작업으로 이루어져 처리 시간이 과도하게 소요되고 있습니다.</p>
                             </div>
-                        </div>
-
-                        <div class="sa-solution-approach">
-                            <h3 class="sa-subsection-title">해결 방안</h3>
-                            <div class="sa-solution-content">
-                                <div class="sa-solution-main">
-                                    <h4>내부 운영 통합 관리 시스템 구축</h4>
-                                    <p>내부 운영진을 위한 전용 시스템을 구축하여 계약서 요청부터 온보딩까지의 전 과정을 디지털화하고, 튜터 정보를 중앙 집중식으로 관리하여 운영 효율성을 극대화합니다.</p>
-                                </div>
-                                <div class="sa-solution-features">
-                                    <div class="sa-feature-item">
-                                        <span class="sa-feature-icon">🚀</span>
-                                        <div>
-                                            <h5>내부 운영 프로세스 자동화</h5>
-                                            <p>운영진 업무 프로세스 자동화로 처리 시간 50% 단축</p>
-                                        </div>
-                                    </div>
-                                    <div class="sa-feature-item">
-                                        <span class="sa-feature-icon">📊</span>
-                                        <div>
-                                            <h5>중앙 집중식 데이터 관리</h5>
-                                            <p>튜터 정보의 체계적 관리 및 내부 활용</p>
-                                        </div>
-                                    </div>
-                                    <div class="sa-feature-item">
-                                        <span class="sa-feature-icon">🔄</span>
-                                        <div>
-                                            <h5>실시간 상태 추적</h5>
-                                            <p>계약 진행 상황 실시간 모니터링</p>
-                                        </div>
-                                    </div>
-                                    <div class="sa-feature-item">
-                                        <span class="sa-feature-icon">📧</span>
-                                        <div>
-                                            <h5>자동화된 튜터 안내</h5>
-                                            <p>단계별 자동 안내 메일 발송</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="sa-problem-item">
+                                <h4>분산된 튜터 정보 관리</h4>
+                                <p>튜터의 경력 정보, 전문 분야, 기술 스택 등 중요한 정보가 여러 시스템에 분산되어 있어 효율적인 관리와 활용이 어려운 상황입니다.</p>
                             </div>
-                        </div>
-
-                        <div class="sa-expected-outcomes">
-                            <h3 class="sa-subsection-title">기대 효과</h3>
-                            <div class="sa-outcomes-grid">
-                                <div class="sa-outcome-item">
-                                    <div class="sa-outcome-metric">50%</div>
-                                    <div class="sa-outcome-description">업무 시간 단축</div>
-                                </div>
-                                <div class="sa-outcome-item">
-                                    <div class="sa-outcome-metric">100%</div>
-                                    <div class="sa-outcome-description">정보 통합 관리</div>
-                                </div>
-                                <div class="sa-outcome-item">
-                                    <div class="sa-outcome-metric">실시간</div>
-                                    <div class="sa-outcome-description">진행 상황 추적</div>
-                                </div>
-                                <div class="sa-outcome-item">
-                                    <div class="sa-outcome-metric">자동화</div>
-                                    <div class="sa-outcome-description">안내 서비스</div>
-                                </div>
+                            <div class="sa-problem-item">
+                                <h4>계약 진행 상황 추적 한계</h4>
+                                <p>외부 전자계약 SaaS 사용으로 인한 API 연동 제약과 수동 상태 관리로 인해 실시간 진행 상황 파악이 어려워 업무 효율성이 저하되고 있습니다.</p>
+                            </div>
+                            <div class="sa-problem-item">
+                                <h4>확장성 부족</h4>
+                                <p>현재 시스템으로는 향후 튜터 규모 확장 시 대응이 어려우며, 튜터 평가, 성과 관리 등 추가 기능 개발에 한계가 있습니다.</p>
                             </div>
                         </div>
                     </div>
-                </section>
 
-                <section class="sa-section" id="sa-architecture">
-                    <h2 class="sa-section-title">시스템 아키텍처</h2>
-                    
-                    <div class="sa-architecture-diagram">
-                        <div class="sa-diagram-container">
-                            <div class="sa-layer">
-                                <h3 class="sa-layer-title">Presentation Layer</h3>
-                                <div class="sa-layer-components">
-                                    <div class="sa-component">
-                                        <h4>내부 운영진 대시보드</h4>
-                                        <p>Next.js + TypeScript + Tailwind CSS</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>매니저 관리 패널</h4>
-                                        <p>계약서 요청, 진행상황 관리</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>자동화된 안내 시스템</h4>
-                                        <p>튜터 대상 이메일 안내 자동화</p>
+                    <div class="sa-solution-approach">
+                        <h3 class="sa-subsection-title">해결 방안</h3>
+                        <div class="sa-solution-content">
+                            <div class="sa-solution-main">
+                                <h4>내부 운영 통합 관리 시스템 구축</h4>
+                                <p>내부 운영진을 위한 전용 시스템을 구축하여 계약서 요청부터 온보딩까지의 전 과정을 디지털화하고, 튜터 정보를 중앙 집중식으로 관리하여 운영 효율성을 극대화합니다.</p>
+                            </div>
+                            <div class="sa-solution-features">
+                                <div class="sa-feature-item">
+                                    <span class="sa-feature-icon">🚀</span>
+                                    <div>
+                                        <h5>내부 운영 프로세스 자동화</h5>
+                                        <p>운영진 업무 프로세스 자동화로 처리 시간 50% 단축</p>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="sa-layer">
-                                <h3 class="sa-layer-title">Business Logic Layer</h3>
-                                <div class="sa-layer-components">
-                                    <div class="sa-component">
-                                        <h4>Django REST API</h4>
-                                        <p>Python Django + DRF</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>계약 관리 서비스</h4>
-                                        <p>계약서 요청/발송 처리</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>튜터 정보 서비스</h4>
-                                        <p>튜터 프로필 및 경력 관리</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>알림 및 안내 서비스</h4>
-                                        <p>자동화된 이메일 발송</p>
+                                <div class="sa-feature-item">
+                                    <span class="sa-feature-icon">📊</span>
+                                    <div>
+                                        <h5>중앙 집중식 데이터 관리</h5>
+                                        <p>튜터 정보의 체계적 관리 및 내부 활용</p>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="sa-layer">
-                                <h3 class="sa-layer-title">Data Layer</h3>
-                                <div class="sa-layer-components">
-                                    <div class="sa-component">
-                                        <h4>PostgreSQL</h4>
-                                        <p>주 데이터베이스</p>
+                                <div class="sa-feature-item">
+                                    <span class="sa-feature-icon">🔄</span>
+                                    <div>
+                                        <h5>실시간 상태 추적</h5>
+                                        <p>계약 진행 상황 실시간 모니터링</p>
                                     </div>
-                                    <div class="sa-component">
-                                        <h4>Redis</h4>
-                                        <p>캐싱 및 세션 관리</p>
-                                    </div>
-                                    <div class="sa-component">
-                                        <h4>Railway Volumes</h4>
-                                        <p>파일 저장소</p>
+                                </div>
+                                <div class="sa-feature-item">
+                                    <span class="sa-feature-icon">📧</span>
+                                    <div>
+                                        <h5>자동화된 튜터 안내</h5>
+                                        <p>단계별 자동 안내 메일 발송</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
 
-                <section class="sa-section" id="sa-dataflow">
-                    <h2 class="sa-section-title">데이터 플로우</h2>
-                    
-                    <div class="sa-data-flow">
-                        <h3 class="sa-flow-title">내부 운영진 관점에서의 데이터 흐름</h3>
-                        <div class="sa-flow-steps">
-                            <div class="sa-flow-step">
-                                <div class="sa-step-number">1</div>
-                                <div class="sa-step-title">계약서 요청</div>
-                                <div class="sa-step-description">매니저가 최소 정보로 요청 생성</div>
+                    <div class="sa-expected-outcomes">
+                        <h3 class="sa-subsection-title">기대 효과</h3>
+                        <div class="sa-outcomes-grid">
+                            <div class="sa-outcome-item">
+                                <div class="sa-outcome-metric">50%</div>
+                                <div class="sa-outcome-description">업무 시간 단축</div>
                             </div>
-                            <div class="sa-flow-step">
-                                <div class="sa-step-number">2</div>
-                                <div class="sa-step-title">계약서 발송</div>
-                                <div class="sa-step-description">외부 SaaS 연동하여 발송</div>
+                            <div class="sa-outcome-item">
+                                <div class="sa-outcome-metric">100%</div>
+                                <div class="sa-outcome-description">정보 통합 관리</div>
                             </div>
-                            <div class="sa-flow-step">
-                                <div class="sa-step-number">3</div>
-                                <div class="sa-step-title">정보 수집</div>
-                                <div class="sa-step-description">튜터 서명 후 자동 정보 수집</div>
+                            <div class="sa-outcome-item">
+                                <div class="sa-outcome-metric">실시간</div>
+                                <div class="sa-outcome-description">진행 상황 추적</div>
                             </div>
-                            <div class="sa-flow-step">
-                                <div class="sa-step-number">4</div>
-                                <div class="sa-step-title">온보딩 처리</div>
-                                <div class="sa-step-description">내부 프로필 생성 및 안내</div>
+                            <div class="sa-outcome-item">
+                                <div class="sa-outcome-metric">자동화</div>
+                                <div class="sa-outcome-description">안내 서비스</div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="sa-section" id="sa-api">
-                    <h2 class="sa-section-title">API 명세</h2>
-                    
-                    <div class="sa-api-specs">
-                        <div class="sa-api-grid">
-                            <div class="sa-api-endpoint">
-                                <div>
-                                    <span class="sa-api-method post">POST</span>
-                                    <span class="sa-api-url">/api/v1/contract-requests</span>
+            <section class="sa-section" id="sa-architecture">
+                <h2 class="sa-section-title">시스템 아키텍처</h2>
+                
+                <div class="sa-architecture-diagram">
+                    <div class="sa-diagram-container">
+                        <div class="sa-layer">
+                            <h3 class="sa-layer-title">Presentation Layer</h3>
+                            <div class="sa-layer-components">
+                                <div class="sa-component">
+                                    <h4>내부 운영진 대시보드</h4>
+                                    <p>Next.js + TypeScript + Tailwind CSS</p>
                                 </div>
-                                <div class="sa-api-description">새로운 계약서 요청 생성</div>
-                                <div class="sa-api-params">
-                                    <h5>Request Body:</h5>
-                                    <ul class="sa-param-list">
-                                        <li>name (string, required) - 튜터 이름</li>
-                                        <li>email (string, required) - 이메일</li>
-                                        <li>phone (string, required) - 연락처</li>
-                                        <li>tutor_type (enum, required) - 튜터 유형</li>
-                                    </ul>
+                                <div class="sa-component">
+                                    <h4>매니저 관리 패널</h4>
+                                    <p>계약서 요청, 진행상황 관리</p>
+                                </div>
+                                <div class="sa-component">
+                                    <h4>자동화된 안내 시스템</h4>
+                                    <p>튜터 대상 이메일 안내 자동화</p>
                                 </div>
                             </div>
-
-                            <div class="sa-api-endpoint">
-                                <div>
-                                    <span class="sa-api-method get">GET</span>
-                                    <span class="sa-api-url">/api/v1/contract-requests</span>
+                        </div>
+                        
+                        <div class="sa-layer">
+                            <h3 class="sa-layer-title">Business Logic Layer</h3>
+                            <div class="sa-layer-components">
+                                <div class="sa-component">
+                                    <h4>Django REST API</h4>
+                                    <p>Python Django + DRF</p>
                                 </div>
-                                <div class="sa-api-description">계약서 요청 목록 조회</div>
-                                <div class="sa-api-params">
-                                    <h5>Query Parameters:</h5>
-                                    <ul class="sa-param-list">
-                                        <li>page (int) - 페이지 번호</li>
-                                        <li>limit (int) - 페이지 크기</li>
-                                        <li>status (enum) - 상태 필터</li>
-                                    </ul>
+                                <div class="sa-component">
+                                    <h4>계약 관리 서비스</h4>
+                                    <p>계약서 요청/발송 처리</p>
                                 </div>
-                            </div>
-
-                            <div class="sa-api-endpoint">
-                                <div>
-                                    <span class="sa-api-method put">PUT</span>
-                                    <span class="sa-api-url">/api/v1/contracts/{id}/status</span>
+                                <div class="sa-component">
+                                    <h4>튜터 정보 서비스</h4>
+                                    <p>튜터 프로필 및 경력 관리</p>
                                 </div>
-                                <div class="sa-api-description">계약서 상태 업데이트</div>
-                                <div class="sa-api-params">
-                                    <h5>Request Body:</h5>
-                                    <ul class="sa-param-list">
-                                        <li>status (enum, required) - 새로운 상태</li>
-                                        <li>notes (string) - 상태 변경 메모</li>
-                                    </ul>
+                                <div class="sa-component">
+                                    <h4>알림 및 안내 서비스</h4>
+                                    <p>자동화된 이메일 발송</p>
                                 </div>
                             </div>
-
-                            <div class="sa-api-endpoint">
-                                <div>
-                                    <span class="sa-api-method get">GET</span>
-                                    <span class="sa-api-url">/api/v1/tutors/{id}/profile</span>
+                        </div>
+                        
+                        <div class="sa-layer">
+                            <h3 class="sa-layer-title">Data Layer</h3>
+                            <div class="sa-layer-components">
+                                <div class="sa-component">
+                                    <h4>PostgreSQL</h4>
+                                    <p>주 데이터베이스</p>
                                 </div>
-                                <div class="sa-api-description">튜터 프로필 조회</div>
-                                <div class="sa-api-params">
-                                    <h5>Response:</h5>
-                                    <ul class="sa-param-list">
-                                        <li>기본 정보 (이름, 연락처, 이메일)</li>
-                                        <li>경력 정보 (년차, 기술스택)</li>
-                                        <li>계약 상태 및 진행 상황</li>
-                                    </ul>
+                                <div class="sa-component">
+                                    <h4>Redis</h4>
+                                    <p>캐싱 및 세션 관리</p>
+                                </div>
+                                <div class="sa-component">
+                                    <h4>Railway Volumes</h4>
+                                    <p>파일 저장소</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="sa-section" id="sa-database">
-                    <h2 class="sa-section-title">데이터베이스 스키마</h2>
-                    
-                    <div class="sa-database-schema">
-                        <div class="sa-schema-grid">
-                            <div class="sa-schema-table">
-                                <h4>tutors (튜터 정보)</h4>
-                                <ul class="sa-schema-fields">
-                                    <li>tutor_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
-                                    <li>name <span class="sa-field-type">VARCHAR(100)</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>email <span class="sa-field-type">VARCHAR(200)</span> <span class="sa-field-required">UNIQUE</span></li>
-                                    <li>phone <span class="sa-field-type">VARCHAR(20)</span></li>
-                                    <li>tutor_type <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>created_at <span class="sa-field-type">TIMESTAMP</span></li>
+            <section class="sa-section" id="sa-dataflow">
+                <h2 class="sa-section-title">데이터 플로우</h2>
+                
+                <div class="sa-data-flow">
+                    <h3 class="sa-flow-title">내부 운영진 관점에서의 데이터 흐름</h3>
+                    <div class="sa-flow-steps">
+                        <div class="sa-flow-step">
+                            <div class="sa-step-number">1</div>
+                            <div class="sa-step-title">계약서 요청</div>
+                            <div class="sa-step-description">매니저가 최소 정보로 요청 생성</div>
+                        </div>
+                        <div class="sa-flow-step">
+                            <div class="sa-step-number">2</div>
+                            <div class="sa-step-title">계약서 발송</div>
+                            <div class="sa-step-description">외부 SaaS 연동하여 발송</div>
+                        </div>
+                        <div class="sa-flow-step">
+                            <div class="sa-step-number">3</div>
+                            <div class="sa-step-title">정보 수집</div>
+                            <div class="sa-step-description">튜터 서명 후 자동 정보 수집</div>
+                        </div>
+                        <div class="sa-flow-step">
+                            <div class="sa-step-number">4</div>
+                            <div class="sa-step-title">온보딩 처리</div>
+                            <div class="sa-step-description">내부 프로필 생성 및 안내</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sa-section" id="sa-api">
+                <h2 class="sa-section-title">API 명세</h2>
+                
+                <div class="sa-api-specs">
+                    <div class="sa-api-grid">
+                        <div class="sa-api-endpoint">
+                            <div>
+                                <span class="sa-api-method post">POST</span>
+                                <span class="sa-api-url">/api/v1/contract-requests</span>
+                            </div>
+                            <div class="sa-api-description">새로운 계약서 요청 생성</div>
+                            <div class="sa-api-params">
+                                <h5>Request Body:</h5>
+                                <ul class="sa-param-list">
+                                    <li>name (string, required) - 튜터 이름</li>
+                                    <li>email (string, required) - 이메일</li>
+                                    <li>phone (string, required) - 연락처</li>
+                                    <li>tutor_type (enum, required) - 튜터 유형</li>
                                 </ul>
                             </div>
-                            
-                            <div class="sa-schema-table">
-                                <h4>contract_requests (계약서 요청)</h4>
-                                <ul class="sa-schema-fields">
-                                    <li>request_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
-                                    <li>tutor_id <span class="sa-field-type">INT</span> <span class="sa-field-required">FK</span></li>
-                                    <li>manager_id <span class="sa-field-type">INT</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>contract_type <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>requested_at <span class="sa-field-type">TIMESTAMP</span></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="sa-schema-table">
-                                <h4>external_contracts (외부 계약서)</h4>
-                                <ul class="sa-schema-fields">
-                                    <li>contract_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
-                                    <li>request_id <span class="sa-field-type">INT</span> <span class="sa-field-required">FK</span></li>
-                                    <li>external_platform <span class="sa-field-type">VARCHAR(50)</span></li>
-                                    <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>sent_at <span class="sa-field-type">TIMESTAMP</span></li>
-                                    <li>signed_at <span class="sa-field-type">TIMESTAMP</span></li>
-                                </ul>
-                            </div>
+                        </div>
 
-                            <div class="sa-schema-table">
-                                <h4>managers (매니저)</h4>
-                                <ul class="sa-schema-fields">
-                                    <li>manager_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
-                                    <li>name <span class="sa-field-type">VARCHAR(100)</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>email <span class="sa-field-type">VARCHAR(200)</span> <span class="sa-field-required">UNIQUE</span></li>
-                                    <li>role <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
-                                    <li>is_active <span class="sa-field-type">BOOLEAN</span> <span class="sa-field-required">DEFAULT TRUE</span></li>
+                        <div class="sa-api-endpoint">
+                            <div>
+                                <span class="sa-api-method get">GET</span>
+                                <span class="sa-api-url">/api/v1/contract-requests</span>
+                            </div>
+                            <div class="sa-api-description">계약서 요청 목록 조회</div>
+                            <div class="sa-api-params">
+                                <h5>Query Parameters:</h5>
+                                <ul class="sa-param-list">
+                                    <li>page (int) - 페이지 번호</li>
+                                    <li>limit (int) - 페이지 크기</li>
+                                    <li>status (enum) - 상태 필터</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="sa-api-endpoint">
+                            <div>
+                                <span class="sa-api-method put">PUT</span>
+                                <span class="sa-api-url">/api/v1/contracts/{id}/status</span>
+                            </div>
+                            <div class="sa-api-description">계약서 상태 업데이트</div>
+                            <div class="sa-api-params">
+                                <h5>Request Body:</h5>
+                                <ul class="sa-param-list">
+                                    <li>status (enum, required) - 새로운 상태</li>
+                                    <li>notes (string) - 상태 변경 메모</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="sa-api-endpoint">
+                            <div>
+                                <span class="sa-api-method get">GET</span>
+                                <span class="sa-api-url">/api/v1/tutors/{id}/profile</span>
+                            </div>
+                            <div class="sa-api-description">튜터 프로필 조회</div>
+                            <div class="sa-api-params">
+                                <h5>Response:</h5>
+                                <ul class="sa-param-list">
+                                    <li>기본 정보 (이름, 연락처, 이메일)</li>
+                                    <li>경력 정보 (년차, 기술스택)</li>
+                                    <li>계약 상태 및 진행 상황</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="sa-section" id="sa-security">
-                    <h2 class="sa-section-title">보안 & 성능</h2>
-                    
-                    <div class="sa-security-performance">
-                        <div class="sa-security-box">
-                            <h3 class="sa-box-title">보안 요구사항</h3>
-                            <ul class="sa-box-list">
-                                <li>JWT 기반 인증 시스템</li>
-                                <li>역할 기반 접근 제어 (RBAC)</li>
-                                <li>개인정보 데이터 암호화</li>
-                                <li>API Rate Limiting</li>
-                                <li>SQL Injection 방어</li>
-                                <li>XSS 공격 방어</li>
-                                <li>HTTPS 필수 적용</li>
+            <section class="sa-section" id="sa-database">
+                <h2 class="sa-section-title">데이터베이스 스키마</h2>
+                
+                <div class="sa-database-schema">
+                    <div class="sa-schema-grid">
+                        <div class="sa-schema-table">
+                            <h4>tutors (튜터 정보)</h4>
+                            <ul class="sa-schema-fields">
+                                <li>tutor_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
+                                <li>name <span class="sa-field-type">VARCHAR(100)</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>email <span class="sa-field-type">VARCHAR(200)</span> <span class="sa-field-required">UNIQUE</span></li>
+                                <li>phone <span class="sa-field-type">VARCHAR(20)</span></li>
+                                <li>tutor_type <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>created_at <span class="sa-field-type">TIMESTAMP</span></li>
                             </ul>
                         </div>
                         
-                        <div class="sa-performance-box">
-                            <h3 class="sa-box-title">성능 최적화</h3>
-                            <ul class="sa-box-list">
-                                <li>Redis 캐싱 시스템</li>
-                                <li>데이터베이스 인덱스 최적화</li>
-                                <li>페이지네이션 구현</li>
-                                <li>API 응답 압축</li>
-                                <li>비동기 처리</li>
-                                <li>모니터링 및 로깅</li>
+                        <div class="sa-schema-table">
+                            <h4>contract_requests (계약서 요청)</h4>
+                            <ul class="sa-schema-fields">
+                                <li>request_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
+                                <li>tutor_id <span class="sa-field-type">INT</span> <span class="sa-field-required">FK</span></li>
+                                <li>manager_id <span class="sa-field-type">INT</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>contract_type <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>requested_at <span class="sa-field-type">TIMESTAMP</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sa-schema-table">
+                            <h4>external_contracts (외부 계약서)</h4>
+                            <ul class="sa-schema-fields">
+                                <li>contract_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
+                                <li>request_id <span class="sa-field-type">INT</span> <span class="sa-field-required">FK</span></li>
+                                <li>external_platform <span class="sa-field-type">VARCHAR(50)</span></li>
+                                <li>status <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>sent_at <span class="sa-field-type">TIMESTAMP</span></li>
+                                <li>signed_at <span class="sa-field-type">TIMESTAMP</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sa-schema-table">
+                            <h4>managers (매니저)</h4>
+                            <ul class="sa-schema-fields">
+                                <li>manager_id <span class="sa-field-type">INT</span> <span class="sa-field-required">PK</span></li>
+                                <li>name <span class="sa-field-type">VARCHAR(100)</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>email <span class="sa-field-type">VARCHAR(200)</span> <span class="sa-field-required">UNIQUE</span></li>
+                                <li>role <span class="sa-field-type">ENUM</span> <span class="sa-field-required">NOT NULL</span></li>
+                                <li>is_active <span class="sa-field-type">BOOLEAN</span> <span class="sa-field-required">DEFAULT TRUE</span></li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="sa-tech-stack">
-                        <h3 class="sa-tech-title">기술 스택</h3>
-                        <div class="sa-tech-categories">
-                            <div class="sa-tech-category">
-                                <h4>백엔드</h4>
-                                <ul class="sa-tech-list">
-                                    <li>Python 3.11+</li>
-                                    <li>Django 5.0</li>
-                                    <li>Django REST Framework</li>
-                                    <li>Celery</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="sa-tech-category">
-                                <h4>프론트엔드</h4>
-                                <ul class="sa-tech-list">
-                                    <li>Next.js 14+</li>
-                                    <li>TypeScript</li>
-                                    <li>Tailwind CSS</li>
-                                    <li>ShadCN UI</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="sa-tech-category">
-                                <h4>데이터베이스</h4>
-                                <ul class="sa-tech-list">
-                                    <li>PostgreSQL</li>
-                                    <li>Redis</li>
-                                    <li>Railway Database</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="sa-tech-category">
-                                <h4>배포 & 인프라</h4>
-                                <ul class="sa-tech-list">
-                                    <li>Railway</li>
-                                    <li>GitHub Actions</li>
-                                    <li>Railway Volumes</li>
-                                </ul>
-                            </div>
+            <section class="sa-section" id="sa-security">
+                <h2 class="sa-section-title">보안 & 성능</h2>
+                
+                <div class="sa-security-performance">
+                    <div class="sa-security-box">
+                        <h3 class="sa-box-title">보안 요구사항</h3>
+                        <ul class="sa-box-list">
+                            <li>JWT 기반 인증 시스템</li>
+                            <li>역할 기반 접근 제어 (RBAC)</li>
+                            <li>개인정보 데이터 암호화</li>
+                            <li>API Rate Limiting</li>
+                            <li>SQL Injection 방어</li>
+                            <li>XSS 공격 방어</li>
+                            <li>HTTPS 필수 적용</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sa-performance-box">
+                        <h3 class="sa-box-title">성능 최적화</h3>
+                        <ul class="sa-box-list">
+                            <li>Redis 캐싱 시스템</li>
+                            <li>데이터베이스 인덱스 최적화</li>
+                            <li>페이지네이션 구현</li>
+                            <li>API 응답 압축</li>
+                            <li>비동기 처리</li>
+                            <li>모니터링 및 로깅</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sa-tech-stack">
+                    <h3 class="sa-tech-title">기술 스택</h3>
+                    <div class="sa-tech-categories">
+                        <div class="sa-tech-category">
+                            <h4>백엔드</h4>
+                            <ul class="sa-tech-list">
+                                <li>Python 3.11+</li>
+                                <li>Django 5.0</li>
+                                <li>Django REST Framework</li>
+                                <li>Celery</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sa-tech-category">
+                            <h4>프론트엔드</h4>
+                            <ul class="sa-tech-list">
+                                <li>Next.js 14+</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind CSS</li>
+                                <li>ShadCN UI</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sa-tech-category">
+                            <h4>데이터베이스</h4>
+                            <ul class="sa-tech-list">
+                                <li>PostgreSQL</li>
+                                <li>Redis</li>
+                                <li>Railway Database</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sa-tech-category">
+                            <h4>배포 & 인프라</h4>
+                            <ul class="sa-tech-list">
+                                <li>Railway</li>
+                                <li>GitHub Actions</li>
+                                <li>Railway Volumes</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
+    </div>
 
         <!-- Dashboard Page -->
         <div class="page active" id="dashboard">
